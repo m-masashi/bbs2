@@ -26,7 +26,7 @@ class PostsController extends Controller
             'title' => 'required|max:50',
             'body' => 'required|max:2000',
         ]);
-    
+
         Post::create($params);
     
         return redirect()->route('top');

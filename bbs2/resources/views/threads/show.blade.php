@@ -11,7 +11,9 @@
             <button class="btn btn-danger">削除する</button>
           </form>
         </div>
-        
+@php
+  //var_dump($timestamp);
+@endphp
         <h1 class="h5 mb-4"> {{ $threads->title }}</h1>
         <p class="mb-5">{!! nl2br(e($threads->body)) !!}</p>
 
@@ -59,6 +61,10 @@
 @endphp      
           <div class="border-top p-4 {{ $posi_class }}">
             <time class="text-secondary">{{ $post->created_at->format('Y.m.d H:i') }}</time>
+            <p class="mt-2">
+              {{ '【番号：' . $post->post_num . '】' }}
+              {{ '【ハッシュID：' . $post->hash_id . '】' }}
+            </p>
             <p class="mt-2">{{ $posi_txt }}</p>
             <p class="mt-2">{!! nl2br(e($post->body)) !!}</p>
           </div>

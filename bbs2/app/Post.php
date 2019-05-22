@@ -10,6 +10,9 @@ class Post extends Model
         'body',
         'thread_id',
         'position',
+        'post_num',
+        'ip',
+        'hash_id',
     ];
 
     public function comments()
