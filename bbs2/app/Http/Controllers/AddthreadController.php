@@ -13,7 +13,7 @@ class AddthreadController extends Controller
     {
         return view('addthreads.create');
     }
-    //スレッド作成
+    //スレッド作成スレッド作成
     public function store(Request $request)
     {
         //スレッドバリデーション
